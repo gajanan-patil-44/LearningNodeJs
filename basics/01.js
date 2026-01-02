@@ -1,4 +1,3 @@
-const { log } = require('console');
 const HTTP = require('http');
 const SERVER = HTTP.createServer((req,res) => {
     console.log(req);
