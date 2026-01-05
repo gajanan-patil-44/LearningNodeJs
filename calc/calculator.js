@@ -1,0 +1,24 @@
+const CALCULATE = (req, res) => { res.write(`
+            <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <form action="/result" method="post">
+        <input type="text" name="num1" placeholder="First Number" required>
+        <input type="text" name="num2" placeholder="Second Number" required>
+        <!-- <select name="operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select> -->
+        <button type="submit">Calculate</button>
+    </form>
+    
+</body>
+</html>`);}
+
+module.exports = CALCULATE;
