@@ -17,10 +17,11 @@ const HOME = (req, res) => {
   } else if (req.url.toLowerCase() === "/calculator" && req.method === "GET") {
     return CALCULATE(req, res);
     // return res.end();
-  } else if (req.url.toLowerCase() === "/result" ) {
+  } else if (req.url.toLowerCase() === "/result" && req.method === "POST") {
     
     RESULT(req, res);
-    return res.end();
+    // return res.end();
+    return;
   }
 
   res.write(`<html lang="en">

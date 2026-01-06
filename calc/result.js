@@ -15,19 +15,23 @@ const RESULT = (req, res) => {
     const NUM2 = parseFloat(PARSED.get("num2"));
     const RES = NUM1 + NUM2;
     console.log(RES);
+    res.writeHead(200, { "Content-Type": "text/html" });
     res.write(`<html lang="en">
             <head>
     
                  <title>Result</title>
             </head>
             <body>
-                <h1>The resul  ${RES}</h1>
+                <h1>The RESULT of ${NUM1} + ${NUM2} = ${RES}</h1>
                 <a href = '/calculator'> go to calculator</a> <br>
                 <a href = '/'> go to Home Page</a>
             </body>
-            </html>`);
+            </html>`
+          
+          );
+          return res.end();
+            
             });
-    return res.end();
     
 };
 
